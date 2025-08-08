@@ -1,0 +1,304 @@
+/* Default CSS for Samson Adewale's Personal Website */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header and Navigation */
+.page-header {
+    border-bottom: 2px solid #667eea;
+    margin: 30px 0 20px 0;
+    padding-bottom: 10px;
+}
+
+.page-header h1 {
+    color: #2c3e50;
+    font-weight: 600;
+    margin: 0;
+}
+
+.page-header h1 a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+.page-header h1 a:hover {
+    color: #667eea;
+}
+
+/* Tables */
+.table {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: #f8f9fa;
+}
+
+.table-hover > tbody > tr:hover {
+    background-color: #e3f2fd;
+    transition: background-color 0.3s ease;
+}
+
+.table th,
+.table td {
+    padding: 12px 15px;
+    border-top: 1px solid #dee2e6;
+    vertical-align: middle;
+}
+
+.entry-date {
+    font-weight: 600;
+    color: #667eea;
+    min-width: 120px;
+    text-align: center;
+}
+
+/* Blog posts and publications */
+.blogposts tr {
+    transition: all 0.3s ease;
+}
+
+.blogposts tr:hover {
+    transform: translateX(5px);
+}
+
+.publication-type {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.8em;
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.addendum {
+    color: #6c757d;
+    font-style: italic;
+    font-size: 0.9em;
+    margin-top: 5px;
+    display: block;
+}
+
+/* Project panels */
+.panel {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.panel:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.panel-primary {
+    border-color: #667eea;
+}
+
+.panel-primary > .panel-heading {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-color: #667eea;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.panel-heading h3 {
+    margin: 0;
+    font-weight: 600;
+    font-size: 1.3em;
+}
+
+.panel-body {
+    padding: 25px;
+    background: white;
+}
+
+.ico {
+    width: 32px;
+    height: 32px;
+    margin-right: 15px;
+    border-radius: 6px;
+}
+
+/* Project comparison tables */
+.compare {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+.compare td {
+    padding: 8px 12px;
+    border-bottom: 1px solid #eee;
+    vertical-align: top;
+}
+
+.compare .factor {
+    font-weight: 600;
+    color: #2c3e50;
+    width: 30%;
+}
+
+.compare .description {
+    color: #555;
+}
+
+/* Social buttons */
+.social-buttons {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.socbutton {
+    width: 48px;
+    height: 48px;
+    margin: 0 10px;
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.socbutton:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Links */
+a {
+    color: #667eea;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #764ba2;
+    text-decoration: underline;
+}
+
+.btn-link {
+    color: #667eea;
+    text-decoration: none;
+}
+
+.btn-link:hover {
+    color: #764ba2;
+    text-decoration: none;
+}
+
+/* Icons */
+.intro-icons {
+    margin-right: 8px;
+    color: #667eea;
+    width: 16px;
+}
+
+.tweet-icon {
+    margin-left: 10px;
+    color: #55acee;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 10px;
+    }
+    
+    .page-header h1 {
+        font-size: 1.8em;
+    }
+    
+    .panel-heading h3 {
+        font-size: 1.1em;
+    }
+    
+    .panel-body {
+        padding: 15px;
+    }
+    
+    .entry-date {
+        min-width: 80px;
+        font-size: 0.9em;
+    }
+    
+    .socbutton {
+        width: 40px;
+        height: 40px;
+        margin: 0 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .panel-heading {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .ico {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    
+    .compare .factor,
+    .compare .description {
+        display: block;
+        width: 100%;
+        padding: 5px 0;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.panel {
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+}
