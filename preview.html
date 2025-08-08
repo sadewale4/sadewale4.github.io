@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Preview Setup - Samson Adewale</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .container {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 8px;
+            border-left: 4px solid #2F638B;
+        }
+        h1 {
+            color: #2F638B;
+            border-bottom: 2px solid #2F638B;
+            padding-bottom: 10px;
+        }
+        .method {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        .method h3 {
+            color: #2F638B;
+            margin-top: 0;
+        }
+        code {
+            background: #f1f1f1;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+        .terminal {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            margin: 10px 0;
+        }
+        .note {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .success {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌐 Local Preview Setup</h1>
+        
+        <p>This page explains how to preview your website locally without pushing to GitHub Pages.</p>
+        
+        <div class="method">
+            <h3>Method 1: Python Simple Server (Recommended)</h3>
+            <p>If you have Python installed, this is the easiest method:</p>
+            
+            <div class="terminal">
+                # Navigate to your project directory<br>
+                cd /path/to/sadewale4.github.io<br><br>
+                
+                # Python 3<br>
+                python -m http.server 8000<br><br>
+                
+                # Python 2 (if you have it)<br>
+                python -m SimpleHTTPServer 8000
+            </div>
+            
+            <p>Then open your browser and go to: <code>http://localhost:8000</code></p>
+        </div>
+        
+        <div class="method">
+            <h3>Method 2: Node.js http-server</h3>
+            <p>If you have Node.js installed:</p>
+            
+            <div class="terminal">
+                # Install http-server globally<br>
+                npm install -g http-server<br><br>
+                
+                # Navigate to your project directory<br>
+                cd /path/to/sadewale4.github.io<br><br>
+                
+                # Start the server<br>
+                http-server -p 8000
+            </div>
+            
+            <p>Then open your browser and go to: <code>http://localhost:8000</code></p>
+        </div>
+        
+        <div class="method">
+            <h3>Method 3: Live Server Extension (VS Code)</h3>
+            <p>If you're using Visual Studio Code:</p>
+            
+            <ol>
+                <li>Install the "Live Server" extension</li>
+                <li>Right-click on <code>index.html</code></li>
+                <li>Select "Open with Live Server"</li>
+                <li>Your browser will automatically open to the preview</li>
+            </ol>
+        </div>
+        
+        <div class="method">
+            <h3>Method 4: PHP Built-in Server</h3>
+            <p>If you have PHP installed:</p>
+            
+            <div class="terminal">
+                # Navigate to your project directory<br>
+                cd /path/to/sadewale4.github.io<br><br>
+                
+                # Start PHP server<br>
+                php -S localhost:8000
+            </div>
+            
+            <p>Then open your browser and go to: <code>http://localhost:8000</code></p>
+        </div>
+        
+        <div class="note">
+            <strong>💡 Tip:</strong> The Python method is usually the simplest since Python comes pre-installed on macOS and most Linux distributions. For Windows, you can download Python from python.org.
+        </div>
+        
+        <div class="success">
+            <strong>✅ Success!</strong> Once you have the server running, you can:
+            <ul>
+                <li>Make changes to your HTML, CSS, or JavaScript files</li>
+                <li>Refresh your browser to see the changes immediately</li>
+                <li>Test responsive design by resizing your browser window</li>
+                <li>Use browser developer tools to debug and inspect elements</li>
+            </ul>
+        </div>
+        
+        <div class="method">
+            <h3>🔧 Development Workflow</h3>
+            <ol>
+                <li>Start your local server using one of the methods above</li>
+                <li>Open <code>http://localhost:8000</code> in your browser</li>
+                <li>Make changes to your files</li>
+                <li>Refresh the browser to see changes</li>
+                <li>When satisfied, commit and push to GitHub</li>
+                <li>GitHub Pages will automatically deploy your changes</li>
+            </ol>
+        </div>
+        
+        <p><a href="index.html">← Back to your website</a></p>
+    </div>
+</body>
+</html>
