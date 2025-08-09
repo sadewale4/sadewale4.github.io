@@ -127,6 +127,31 @@ body {
 .panel-body {
     padding: 25px;
     background: white;
+    display: none;
+}
+
+.panel-heading h3 {
+    cursor: pointer;
+    margin: 0;
+    padding: 15px 25px;
+    transition: background-color 0.3s ease;
+}
+
+.panel-heading h3:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.panel-heading h3::after {
+    content: '▼';
+    float: right;
+    font-size: 0.8em;
+    color: rgba(255, 255, 255, 0.7);
+    transition: transform 0.3s ease;
+}
+
+.panel-heading h3.expanded::after {
+    content: '▲';
+    transform: rotate(180deg);
 }
 
 .ico {
