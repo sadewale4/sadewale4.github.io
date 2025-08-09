@@ -1,3 +1,7 @@
+---
+title: Samson Adewale
+---
+
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
@@ -7,9 +11,8 @@
   <meta name="author" content="Samson Adewale" />
   <title>Samson Adewale</title>
 
-  <!-- Canonical, Icons, Feed (Jekyll friendly) -->
-  <link rel="canonical" href="{{ page.url | absolute_url }}" />
-  <link rel="icon" type="image/x-icon" href="{{ site.favicon_location }}" />
+  <!-- Canonical, Icons, Feed -->
+  <link rel="canonical" href="https://sadewale4.github.io/" />
   <link rel="alternate" type="application/rss+xml" title="@sadewale4 - Blog" href="/blog/feed.xml" />
 
   <!-- Fonts -->
@@ -82,7 +85,7 @@
     <div class="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
       <div class="grid md:grid-cols-[180px_1fr] gap-8 items-center">
         <div class="w-[160px] h-[160px] rounded-2xl overflow-hidden ring-2 ring-white/70 dark:ring-slate-800 shadow-soft">
-          <img src="img/profile-photo.jpg" alt="Photo of Samson Adewale" class="w-full h-full object-cover" />
+          <img src="img/profile-photo.png" alt="Photo of Samson Adewale" class="w-full h-full object-cover" />
         </div>
         <div>
           <h1 class="text-3xl sm:text-5xl font-extrabold leading-tight">Samson Adewale</h1>
@@ -109,27 +112,31 @@
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="flex items-end justify-between gap-4">
         <h2 class="text-2xl sm:text-3xl font-bold">Latest Blog Posts</h2>
-        <a href="/blog" class="text-sm link-underline hover:text-primary">View all →</a>
+        <a href="#blog" class="text-sm link-underline hover:text-primary">View all →</a>
       </div>
 
       <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {% for post in site.posts limit:6 %}
-        <a href="{{ post.url }}" class="group block p-5 rounded-2xl ring-1 ring-slate-200/80 dark:ring-slate-800 hover:ring-primary/50 transition shadow-sm hover:shadow-soft bg-white dark:bg-slate-900">
-          <div class="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400">{{ post.date | date: "%b %d, %Y" }}</div>
-          <h3 class="mt-1 font-semibold text-lg leading-snug group-hover:text-primary">{{ post.title }}</h3>
-          {% if post.description %}
-          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300 line-clamp-3">{{ post.description }}</p>
-          {% endif %}
-          {% if post.read_time %}
-          <div class="mt-3 flex items-center gap-2 text-xs text-slate-500">
-            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
-            </svg>
-            {{ post.read_time }} min read
-          </div>
-          {% endif %}
-        </a>
+        <!-- Debug: Show post count -->
+        <div class="col-span-full text-sm text-slate-500 mb-4">
+          Total posts: {{ site.posts.size }}
+        </div>
+        
+        <!-- Test: Simple post display -->
+        {% for post in site.posts limit:3 %}
+        <div class="p-5 rounded-2xl ring-1 ring-slate-200/80 dark:ring-slate-800 bg-white dark:bg-slate-900">
+          <h3 class="font-semibold text-lg">{{ post.title }}</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-300 mt-2">{{ post.description }}</p>
+          <div class="text-xs text-slate-500 mt-2">{{ post.date | date: "%b %d, %Y" }}</div>
+        </div>
         {% endfor %}
+        
+        <!-- Debug: Show if no posts -->
+        {% if site.posts.size == 0 %}
+        <div class="col-span-full text-center py-8 text-slate-500">
+          <p>No blog posts found.</p>
+          <p class="text-sm mt-2">Debug: site.posts.size = {{ site.posts.size }}</p>
+        </div>
+        {% endif %}
       </div>
     </div>
   </section>
@@ -232,7 +239,7 @@
         <p>
           <a class="hover:text-primary" rel="me" href="https://twitter.com/sadewale4" target="_blank">@sadewale4</a>
           <span class="mx-2">•</span>
-          <a class="hover:text-primary" href="/blog">Blog</a>
+          <a class="hover:text-primary" href="#blog">Blog</a>
           <span class="mx-2">•</span>
           <a class="hover:text-primary" href="#projects">Projects</a>
         </p>

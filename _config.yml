@@ -6,10 +6,12 @@ email: samson@example.com
 url: https://sadewale4.github.io
 baseurl: ""
 
+# Markdown processor
+markdown: kramdown
+highlighter: rouge
+
 # Blog settings
 permalink: /:year/:month/:day/:title/
-paginate: 10
-paginate_path: "/blog/page:num/"
 
 # Collections
 collections:
@@ -25,11 +27,6 @@ defaults:
     values:
       layout: "post"
       author: "Samson Adewale"
-
-# Plugins (GitHub Pages compatible)
-plugins:
-  - jekyll-paginate
-  - jekyll-feed
 
 # Exclude from processing
 exclude:

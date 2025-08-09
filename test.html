@@ -1,0 +1,32 @@
+---
+title: Test
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jekyll Test</title>
+</head>
+<body>
+    <h1>Jekyll Test</h1>
+    
+    <h2>Site Info</h2>
+    <p>Title: {{ site.title }}</p>
+    <p>Description: {{ site.description }}</p>
+    
+    <h2>Posts</h2>
+    <p>Total posts: {{ site.posts.size }}</p>
+    
+    {% for post in site.posts %}
+    <div>
+        <h3>{{ post.title }}</h3>
+        <p>Date: {{ post.date }}</p>
+        <p>Description: {{ post.description }}</p>
+    </div>
+    {% endfor %}
+    
+    <h2>Page Info</h2>
+    <p>Page title: {{ page.title }}</p>
+    <p>Page URL: {{ page.url }}</p>
+</body>
+</html>
