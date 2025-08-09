@@ -116,12 +116,17 @@
         {% for post in site.posts limit:6 %}
         <a href="{{ post.url }}" class="group block p-5 rounded-2xl ring-1 ring-slate-200/80 dark:ring-slate-800 hover:ring-primary/50 transition shadow-sm hover:shadow-soft bg-white dark:bg-slate-900">
           <div class="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400">{{ post.date | date: "%b %d, %Y" }}</div>
-          <h3 class="mt-1 font-semibold text-lg leading-snug group-hover:text-primary">{{ post.title | markdownify | strip_html | smartify }}</h3>
-          {% if post.tldr %}
-          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300 line-clamp-3">{{ post.tldr | markdownify | strip_html | smartify }}</p>
+          <h3 class="mt-1 font-semibold text-lg leading-snug group-hover:text-primary">{{ post.title }}</h3>
+          {% if post.description %}
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300 line-clamp-3">{{ post.description }}</p>
           {% endif %}
-          {% if post.tweet %}
-          <span class="mt-3 inline-flex items-center text-xs text-slate-500">On X/Twitter ↗</span>
+          {% if post.read_time %}
+          <div class="mt-3 flex items-center gap-2 text-xs text-slate-500">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+            </svg>
+            {{ post.read_time }} min read
+          </div>
           {% endif %}
         </a>
         {% endfor %}

@@ -1,0 +1,48 @@
+# Jekyll Configuration for Samson Adewale's Website
+title: Samson Adewale
+description: Senior Cybersecurity Engineer focused on Cloud Security, DevSecOps, and Cloud‑Native architectures
+author: Samson Adewale
+email: samson@example.com
+url: https://sadewale4.github.io
+baseurl: ""
+
+# Blog settings
+permalink: /:year/:month/:day/:title/
+paginate: 10
+paginate_path: "/blog/page:num/"
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /:collection/:year/:month/:day/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Samson Adewale"
+
+# Plugins (GitHub Pages compatible)
+plugins:
+  - jekyll-paginate
+  - jekyll-feed
+
+# Exclude from processing
+exclude:
+  - README.md
+  - .gitignore
+  - node_modules
+  - vendor
+
+# Include
+include:
+  - _posts
+  - _layouts
+  - _includes
+  - css
+  - img
+  - js
