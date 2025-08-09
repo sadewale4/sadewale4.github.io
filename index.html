@@ -1,251 +1,256 @@
----
-#
----
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Personal website of Samson Adewale.">
-  <meta name="author" content="Samson Adewale">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Personal website of Samson Adewale – Senior Cybersecurity Engineer (Cloud Security, DevSecOps, Cloud‑Native)." />
+  <meta name="author" content="Samson Adewale" />
   <title>Samson Adewale</title>
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/default.css" rel="stylesheet">
-  <link href="css/fa.min.css" rel="stylesheet">
-  <link rel="canonical" href="{{ page.url | absolute_url }}">
-  <link rel="icon" type="image/x-icon" href="{{ site.favicon_location }}">
-  <link rel="alternate" type="application/rss+xml" title="@sadewale4 - Blog" href="/blog/feed.xml">
-</head>
 
-<body>
-  <div style="width: 100%; min-height: 230px; background-color: #2F638B;">
-    <div class="container">
-      <div class="jumbotron row" style=" padding: 15px 0; background-color: rgba(0,0,0,0); margin: 20px 0;">
-        <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12" style="padding: 0;">
-          <div style="float: left; width: 100%; max-width: 175px; height: 100%; margin-right: 20px;" id="avatar">
-            <img src="img/profile-photo.jpg" style="width: 100%; height: 100%; border: 1px solid white;" alt="Photo of Samson Adewale">
-          </div>
-          <h1 style="font-size: 45px; font-weight: bold; margin: 0; margin-bottom: 10px; color: white;"
-            class="namess">Samson Adewale</h1>
-          <div class="text-info" style="font-size: 16px; color: #C2BEBE; margin-bottom: 0; display: table-cell;">
+  <!-- Canonical, Icons, Feed (Jekyll friendly) -->
+  <link rel="canonical" href="{{ page.url | absolute_url }}" />
+  <link rel="icon" type="image/x-icon" href="{{ site.favicon_location }}" />
+  <link rel="alternate" type="application/rss+xml" title="@sadewale4 - Blog" href="/blog/feed.xml" />
 
-            <div class="indent">
-              <i class="fas fa-code intro-icons"></i>Cybersecurity Architect, Platform Engineer & Technology Researcher
-            </div>
-            <div class="indent">
-              <i class="fas fa-rocket intro-icons"></i>Passionate about building innovative solutions learning new technologies specifically around Cybersecurity, Cloud Infrastructure and AI/ML.
-            </div>
-            <div class="indent">
-              <i class="fas fa-globe-americas intro-icons"></i>Atlanta, GA, United States
-            </div>
-          </div>
-        </div>
-        <!--googleoff: all-->
-        <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12"
-          style="background: white; border-radius: 3px; margin-top: 20px; padding: 7px; color: black;">
-          <div class="indent2">
-            <img src="img/twee.svg" style="width: 25px; margin-left: 25px; margin-right: 20px;" alt="Twitter logo">
-            <span style="margin-right: 5px;" id="twit">
-              <a href="https://www.twitter.com/sadewale4" target="_blank">@sadewale4</a>: Check out my latest updates <a href="https://www.twitter.com/sadewale4" target="_blank">here</a>.</span>
-          </div>
-        </div>
-        <!--googleon: all-->
-      </div>
-    </div>
-  </div>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 
-
-  <div class="container">
-
-    <div class="page-header" style="padding-bottom: 0; margin-bottom: 0;">
-      <h1 style="margin-bottom: 10px;"><a href="/blog" style="color: inherit;">Blog Posts</a></h1>
-    </div>
-    <table class="table table-striped table-hover blogposts">
-      <tbody>
-        {% for post in site.posts %}
-        <tr style="cursor: pointer;">
-          <td class="entry-date" title="{{ post.date | date: "%-d %B %Y" }}">{{ post.date | date: "%B %Y" }}</td>
-          <td><a href="{{ post.url }}" title="{{ post.tldr | markdownify | strip_html | smartify }}"
-              style="font-weight: bold; color: inherit; text-decoration: none;">{{ post.title | markdownify | strip_html | smartify
-              }}</a>{% if post.tweet %}<a href="https://www.twitter.com/sadewale4/status/{{post.tweet}}" title="Tweet relating to this post" class="fab fa-twitter tweet-icon btn-link"></a>{% endif %}</td>
-        </tr>
-        {% endfor %}
-      </tbody>
-    </table>
-
-
-
-    <div class="page-header" style="padding-bottom: 0; margin-bottom: 0;" id="projecten">
-      <h1 style="margin-bottom: 10px;">Featured Projects</h1>
-    </div>
-
-    <div id="PortfolioWebsite" class="panel panel-primary">
-      <div class="panel-heading">
-        <img src="https://via.placeholder.com/32x32/2F638B/ffffff?text=SA" class="ico" alt="ico">
-        <h3 class="panel-title" onclick="toggle('portfolio-body')">Personal Portfolio Website</h3>
-      </div>
-      <div class="panel-body" id="portfolio-body">
-        <div style="float: right; margin-left: 10px; max-width: 35%; min-width: 200px;">
-          <a href="img/portfolio-preview.png">
-            <img src="https://via.placeholder.com/400x300/2F638B/ffffff?text=Portfolio+Preview" alt="Screenshot of Portfolio Website" style="width: 100%; border: 1px solid #aaa;">
-          </a>
-        </div>
-        <p>A modern, responsive personal portfolio website showcasing my skills, projects, and professional journey. Built with clean, semantic HTML, modern CSS with gradients and animations, and vanilla JavaScript for interactivity. The design emphasizes user experience with smooth transitions and mobile-first responsive design.</p>
-        <table class="compare">
-          <tr>
-            <td class="factor">Project start</td>
-            <td class="description"><time datetime="2024-01">January 2024</time></td>
-          </tr>
-          <tr>
-            <td class="factor">Technology</td>
-            <td class="description">HTML5, CSS3, JavaScript, GitHub Pages</td>
-          </tr>
-          <tr>
-            <td class="factor">Source Code</td>
-            <td class="description"><a href="https://github.com/sadewale4/sadewale4.github.io">github.com/sadewale4/sadewale4.github.io</a></td>
-          </tr>
-          <tr>
-            <td class="factor">Live Website</td>
-            <td class="description"><a href="https://sadewale4.github.io/">sadewale4.github.io</a></td>
-          </tr>
-        </table>
-        <br>
-      </div>
-    </div>
-
-    <div id="WebApp" class="panel panel-primary">
-      <div class="panel-heading">
-        <img src="https://via.placeholder.com/32x32/2F638B/ffffff?text=WA" class="ico" alt="ico">
-        <h3 class="panel-title" onclick="toggle('webapp-body')">Web Application Project</h3>
-      </div>
-      <div class="panel-body" id="webapp-body">
-        <div style="float: right; margin-left: 10px; max-width: 35%;min-width: 200px;">
-          <a href="img/webapp-preview.png">
-            <img src="https://via.placeholder.com/400x300/2F638B/ffffff?text=Web+App+Preview" alt="Screenshot of Web Application" style="width: 100%; border: 1px solid #aaa;">
-          </a>
-        </div>
-        <p>A full-stack web application demonstrating modern development practices. Features include user authentication, database integration, RESTful API design, and responsive frontend. This project showcases my ability to build complete, production-ready applications from concept to deployment.</p>
-        <table class="compare">
-          <tr>
-            <td class="factor">Project start</td>
-            <td class="description"><time datetime="2024-02">February 2024</time></td>
-          </tr>
-          <tr>
-            <td class="factor">Technology</td>
-            <td class="description">React, Node.js, Express, MongoDB, JWT</td>
-          </tr>
-          <tr>
-            <td class="factor">Source Code</td>
-            <td class="description"><a href="https://github.com/sadewale4/webapp-project">github.com/sadewale4/webapp-project</a></td>
-          </tr>
-          <tr>
-            <td class="factor">Live Demo</td>
-            <td class="description"><a href="#">Coming Soon</a></td>
-          </tr>
-        </table>
-        <br>
-      </div>
-    </div>
-
-    <div id="MobileApp" class="panel panel-primary">
-      <div class="panel-heading">
-        <img src="https://via.placeholder.com/32x32/2F638B/ffffff?text=MA" class="ico" alt="ico">
-        <h3 class="panel-title" onclick="toggle('mobileapp-body')">Mobile App Concept</h3>
-      </div>
-      <div class="panel-body" id="mobileapp-body">
-        <div style="float: right; margin-left: 10px; max-width: 35%;min-width: 200px;">
-          <a href="img/mobileapp-preview.png">
-            <img src="https://via.placeholder.com/400x300/2F638B/ffffff?text=Mobile+App" alt="Screenshot of Mobile App" style="width: 100%;">
-          </a>
-        </div>
-        <p>An innovative mobile application concept designed to solve real-world problems. This project demonstrates my understanding of mobile-first design principles, user experience optimization, and cross-platform development considerations.</p>
-        <br>
-        <table class="compare">
-          <tr>
-            <td class="factor">Project start</td>
-            <td class="description"><time datetime="2024-03">March 2024</time></td>
-          </tr>
-          <tr>
-            <td class="factor">Platform</td>
-            <td class="description">React Native (iOS & Android)</td>
-          </tr>
-          <tr>
-            <td class="factor">Technology</td>
-            <td class="description">React Native, Expo, Firebase, Redux</td>
-          </tr>
-          <tr>
-            <td colspan="2">&nbsp;</td>
-          </tr>
-          <tr>
-            <td class="factor">Status</td>
-            <td class="description">In Development</td>
-          </tr>
-          <tr>
-            <td class="factor">Source Code</td>
-            <td class="description">&raquo;
-              <a href="https://github.com/sadewale4/mobile-app" target="_blank">Private Repository</a>
-            </td>
-          </tr>
-        </table>
-        <br>
-      </div>
-    </div>
-
-    <div class="page-header" style="padding-bottom: 0; margin-bottom: 0;">
-      <h1 style="margin-bottom: 10px;" id="social">Connect With Me</h1>
-    </div>
-    <p class="social-buttons">
-      <a href="https://www.linkedin.com/in/samson-adewale" target="_blank">
-        <img src="img/in.png" alt="LinkedIn" class="socbutton">
-      </a>
-      <a href="https://www.twitter.com/sadewale4" target="_blank">
-        <img src="img/tw.png" alt="Twitter" class="socbutton" style="background: #55acee;">
-      </a>
-      <a href="https://www.github.com/sadewale4" target="_blank">
-        <img src="img/github.png" alt="GitHub" class="socbutton">
-      </a>
-      <a href="mailto:samson.adewale@example.com" target="_blank">
-        <img src="https://via.placeholder.com/48x48/EA4335/ffffff?text=@" alt="Email" class="socbutton" style="background: #EA4335;">
-      </a>
-    </p>
-  </div>
-
-  <script>var a;
-    document.addEventListener("DOMContentLoaded", () => {
-      document.querySelectorAll('.blogposts tr').forEach(tr => tr.addEventListener('mouseup', e=>{
-        if(e.target.tagName == 'A') return;
-        let href = tr.querySelector("td>a[href]") ?? tr.querySelector("td>div>div>a[href]");
-        if (href){
-          switch (e.which) {
-            // left click
-            case 1: {
-              window.location = href.href;
-              break;
-            }
-            // middle click
-            case 2: {
-              window.open(href.href);
-              break;
-            }
+  <!-- TailwindCSS (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ["Inter", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "Noto Sans", "sans-serif"] },
+          colors: {
+            primary: { DEFAULT: "#2F638B", 50: "#F1F7FC", 100: "#E3EFF8", 600: "#2F638B" },
+          },
+          boxShadow: {
+            soft: "0 10px 25px -8px rgba(0,0,0,0.15)",
           }
         }
-      }));
+      },
+      darkMode: 'class'
+    }
+  </script>
+  
+  <!-- Minimal base styles for prose-like content -->
+  <style>
+    html, body { height: 100%; }
+    .link-underline { position: relative; }
+    .link-underline::after { content: ""; position: absolute; left: 0; bottom: -2px; width: 100%; height: 2px; background: currentColor; transform: scaleX(0); transform-origin: left; transition: transform .25s ease; opacity: .2; }
+    .link-underline:hover::after { transform: scaleX(1); opacity: .35; }
+  </style>
+</head>
+
+<body class="bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-100">
+  <!-- ===== Header / Nav ===== -->
+  <header class="sticky top-0 z-50 backdrop-blur bg-white/70 dark:bg-slate-950/60 border-b border-slate-200/60 dark:border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center justify-between h-16">
+        <a href="#home" class="font-semibold text-lg tracking-tight">Samson <span class="text-primary">Adewale</span></a>
+        <nav class="hidden md:flex items-center gap-6 text-sm">
+          <a href="#blog" class="hover:text-primary link-underline">Blog</a>
+          <a href="#projects" class="hover:text-primary link-underline">Projects</a>
+          <a href="#contact" class="hover:text-primary link-underline">Connect</a>
+          <a href="https://github.com/sadewale4" target="_blank" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl ring-1 ring-slate-300/70 dark:ring-slate-700 hover:ring-primary/60 transition"><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.98 5.24.98 11.5c0 4.85 3.15 8.96 7.51 10.41.55.1.75-.24.75-.53 0-.26-.01-1.12-.02-2.04-3.05.66-3.7-1.3-3.7-1.3-.5-1.28-1.22-1.63-1.22-1.63-.99-.68.08-.67.08-.67 1.1.08 1.68 1.13 1.68 1.13.98 1.67 2.57 1.19 3.2.9.1-.71.38-1.19.68-1.47-2.44-.28-5-1.22-5-5.43 0-1.2.43-2.18 1.13-2.95-.11-.28-.49-1.42.11-2.96 0 0 .92-.29 3.02 1.13a10.5 10.5 0 0 1 5.5 0c2.1-1.42 3.02-1.13 3.02-1.13.6 1.54.22 2.68.11 2.96.7.77 1.13 1.75 1.13 2.95 0 4.22-2.57 5.14-5.02 5.41.39.34.73 1 .73 2.03 0 1.47-.01 2.65-.01 3.01 0 .29.2.64.76.53 4.35-1.45 7.5-5.56 7.5-10.41C23.02 5.24 18.27.5 12 .5Z"/></svg> GitHub</a>
+        </nav>
+        <div class="flex items-center gap-2">
+          <button id="themeToggle" aria-label="Toggle dark mode" class="rounded-xl p-2 ring-1 ring-slate-300/70 dark:ring-slate-700 hover:ring-primary/60 transition">
+            <svg id="sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4 w-4 hidden dark:block" fill="currentColor"><path d="M6.76 4.84l-1.8-1.79L3.17 4.84l1.79 1.79 1.8-1.79zm10.48 0l1.8-1.79 1.79 1.79-1.79 1.79-1.8-1.79zM12 4V1h-0v3h0zm0 19v-3h0v3h0zM4 12H1v0h3v0zm19 0h-3v0h3v0zM6.76 19.16l-1.8 1.79-1.79-1.79 1.79-1.79 1.8 1.79zm12.27 0l1.79 1.79-1.79 1.79-1.79-1.79 1.79-1.79zM12 7a5 5 0 100 10A5 5 0 0012 7z"/></svg>
+            <svg id="moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4 w-4 dark:hidden" fill="currentColor"><path d="M20.742 13.045A8 8 0 1111 3a9 9 0 109.742 10.045z"/></svg>
+          </button>
+          <button class="md:hidden rounded-xl p-2 ring-1 ring-slate-300/70 dark:ring-slate-700" onclick="document.getElementById('mnav').classList.toggle('hidden')" aria-label="Open Menu">☰</button>
+        </div>
+      </div>
+      <div id="mnav" class="md:hidden pb-3 hidden">
+        <nav class="flex flex-col gap-2 text-sm">
+          <a href="#blog" class="hover:text-primary">Blog</a>
+          <a href="#projects" class="hover:text-primary">Projects</a>
+          <a href="#contact" class="hover:text-primary">Connect</a>
+          <a href="https://github.com/sadewale4" target="_blank" class="hover:text-primary">GitHub</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <section id="home" class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-primary/10 via-primary/0 to-primary/20 dark:from-primary/15 dark:to-primary/30"></div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
+      <div class="grid md:grid-cols-[180px_1fr] gap-8 items-center">
+        <div class="w-[160px] h-[160px] rounded-2xl overflow-hidden ring-2 ring-white/70 dark:ring-slate-800 shadow-soft">
+          <img src="img/profile-photo.jpg" alt="Photo of Samson Adewale" class="w-full h-full object-cover" />
+        </div>
+        <div>
+          <h1 class="text-3xl sm:text-5xl font-extrabold leading-tight">Samson Adewale</h1>
+          <p class="mt-3 text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-3xl">Senior Cybersecurity Engineer focused on <strong>Cloud Security</strong>, <strong>DevSecOps</strong>, and <strong>Cloud‑Native</strong> architectures. I design secure platforms, automate incident response, and build tooling for high‑velocity teams.</p>
+          <ul class="mt-6 flex flex-wrap gap-2">
+            <li class="px-3 py-1 rounded-full bg-primary/10 text-primary text-sm">AWS · EKS · Kubernetes</li>
+            <li class="px-3 py-1 rounded-full bg-primary/10 text-primary text-sm">Terraform · GitOps</li>
+            <li class="px-3 py-1 rounded-full bg-primary/10 text-primary text-sm">IR · Forensics · Tines</li>
+          </ul>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="#projects" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-primary text-white shadow-soft hover:opacity-95 transition">View Projects</a>
+            <a href="#blog" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl ring-1 ring-slate-300/80 dark:ring-slate-700 hover:ring-primary/60 transition">Read Blog</a>
+          </div>
+          <div class="mt-6 text-sm text-slate-500 dark:text-slate-400">
+            <span class="inline-flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.14 2 5 5.14 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.86-3.14-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/></svg> Atlanta, GA, United States</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Blog ===== -->
+  <section id="blog" class="py-12 sm:py-16 border-t border-slate-200/70 dark:border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex items-end justify-between gap-4">
+        <h2 class="text-2xl sm:text-3xl font-bold">Latest Blog Posts</h2>
+        <a href="/blog" class="text-sm link-underline hover:text-primary">View all →</a>
+      </div>
+
+      <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {% for post in site.posts limit:6 %}
+        <a href="{{ post.url }}" class="group block p-5 rounded-2xl ring-1 ring-slate-200/80 dark:ring-slate-800 hover:ring-primary/50 transition shadow-sm hover:shadow-soft bg-white dark:bg-slate-900">
+          <div class="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400">{{ post.date | date: "%b %d, %Y" }}</div>
+          <h3 class="mt-1 font-semibold text-lg leading-snug group-hover:text-primary">{{ post.title | markdownify | strip_html | smartify }}</h3>
+          {% if post.tldr %}
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300 line-clamp-3">{{ post.tldr | markdownify | strip_html | smartify }}</p>
+          {% endif %}
+          {% if post.tweet %}
+          <span class="mt-3 inline-flex items-center text-xs text-slate-500">On X/Twitter ↗</span>
+          {% endif %}
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Projects ===== -->
+  <section id="projects" class="py-12 sm:py-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <h2 class="text-2xl sm:text-3xl font-bold">Featured Projects</h2>
+      <div class="mt-8 grid md:grid-cols-2 gap-6">
+        <!-- Portfolio Website Card -->
+        <article class="rounded-2xl overflow-hidden ring-1 ring-slate-200/80 dark:ring-slate-800 bg-white dark:bg-slate-900 shadow-sm hover:shadow-soft transition">
+          <div class="aspect-[4/3] bg-slate-100 dark:bg-slate-800">
+            <img src="https://via.placeholder.com/1200x900/2F638B/ffffff?text=Portfolio+Preview" alt="Screenshot of Portfolio Website" class="w-full h-full object-cover" />
+          </div>
+          <div class="p-6">
+            <h3 class="text-lg font-semibold">Personal Portfolio Website</h3>
+            <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Responsive, accessible portfolio powered by GitHub Pages + Jekyll. Clean HTML, modern CSS, and minimal JS with dark‑mode support.</p>
+            <dl class="mt-4 grid grid-cols-2 gap-2 text-sm">
+              <div><dt class="text-slate-500">Project start</dt><dd>Jan 2024</dd></div>
+              <div><dt class="text-slate-500">Tech</dt><dd>HTML, CSS, GitHub Pages</dd></div>
+            </dl>
+            <div class="mt-4 flex flex-wrap gap-3 text-sm">
+              <a class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl ring-1 ring-slate-300/70 dark:ring-slate-700 hover:ring-primary/60 transition" href="https://github.com/sadewale4/sadewale4.github.io" target="_blank">Source</a>
+              <a class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-primary text-white hover:opacity-95 transition" href="https://sadewale4.github.io/" target="_blank">Live</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Web App Card -->
+        <article class="rounded-2xl overflow-hidden ring-1 ring-slate-200/80 dark:ring-slate-800 bg-white dark:bg-slate-900 shadow-sm hover:shadow-soft transition">
+          <div class="aspect-[4/3] bg-slate-100 dark:bg-slate-800">
+            <img src="https://via.placeholder.com/1200x900/2F638B/ffffff?text=Web+App+Preview" alt="Screenshot of Web App" class="w-full h-full object-cover" />
+          </div>
+          <div class="p-6">
+            <h3 class="text-lg font-semibold">Web Application Project</h3>
+            <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Full‑stack demo with auth, REST API, and responsive frontend. Designed to illustrate production‑ready patterns.</p>
+            <dl class="mt-4 grid grid-cols-2 gap-2 text-sm">
+              <div><dt class="text-slate-500">Project start</dt><dd>Feb 2024</dd></div>
+              <div><dt class="text-slate-500">Tech</dt><dd>React, Node, MongoDB</dd></div>
+            </dl>
+            <div class="mt-4 flex flex-wrap gap-3 text-sm">
+              <a class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl ring-1 ring-slate-300/70 dark:ring-slate-700 hover:ring-primary/60 transition" href="https://github.com/sadewale4/webapp-project" target="_blank">Source</a>
+              <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Demo: Coming Soon</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Mobile App Card -->
+        <article class="rounded-2xl overflow-hidden ring-1 ring-slate-200/80 dark:ring-slate-800 bg-white dark:bg-slate-900 shadow-sm hover:shadow-soft transition">
+          <div class="aspect-[4/3] bg-slate-100 dark:bg-slate-800">
+            <img src="https://via.placeholder.com/1200x900/2F638B/ffffff?text=Mobile+App" alt="Screenshot of Mobile App" class="w-full h-full object-cover" />
+          </div>
+          <div class="p-6">
+            <h3 class="text-lg font-semibold">Mobile App Concept</h3>
+            <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Cross‑platform concept emphasizing mobile‑first UX and performance.
+            </p>
+            <dl class="mt-4 grid grid-cols-2 gap-2 text-sm">
+              <div><dt class="text-slate-500">Status</dt><dd>In Development</dd></div>
+              <div><dt class="text-slate-500">Tech</dt><dd>React Native, Expo</dd></div>
+            </dl>
+            <div class="mt-4 flex flex-wrap gap-3 text-sm">
+              <a class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl ring-1 ring-slate-300/70 dark:ring-slate-700 hover:ring-primary/60 transition" href="https://github.com/sadewale4/mobile-app" target="_blank">Private Repo</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Social / Contact ===== -->
+  <section id="contact" class="py-12 sm:py-16 border-t border-slate-200/70 dark:border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex items-end justify-between gap-4">
+        <h2 class="text-2xl sm:text-3xl font-bold">Connect With Me</h2>
+      </div>
+      <p class="mt-2 text-slate-600 dark:text-slate-300">I share work, ideas, and open‑source projects across these platforms.</p>
+      <div class="mt-6 grid grid-cols-2 sm:flex sm:flex-wrap gap-4">
+        <a href="https://www.linkedin.com/in/samson-adewale-seceng/" target="_blank" class="inline-flex items-center gap-3 px-4 py-3 rounded-2xl ring-1 ring-slate-300/80 dark:ring-slate-700 hover:ring-primary/60 bg-white dark:bg-slate-900 transition shadow-sm">
+          <img src="img/in.png" alt="LinkedIn" class="w-6 h-6"/> LinkedIn
+        </a>
+        <a href="https://www.twitter.com/sadewale1" target="_blank" class="inline-flex items-center gap-3 px-4 py-3 rounded-2xl ring-1 ring-slate-300/80 dark:ring-slate-700 hover:ring-primary/60 bg-white dark:bg-slate-900 transition shadow-sm">
+          <img src="img/tw.png" alt="Twitter" class="w-6 h-6"/> Twitter
+        </a>
+        <a href="https://www.github.com/sadewale4" target="_blank" class="inline-flex items-center gap-3 px-4 py-3 rounded-2xl ring-1 ring-slate-300/80 dark:ring-slate-700 hover:ring-primary/60 bg-white dark:bg-slate-900 transition shadow-sm">
+          <img src="img/github.png" alt="GitHub" class="w-6 h-6"/> GitHub
+        </a>
+        <a href="mailto:samwale008@gmail.com" target="_blank" class="inline-flex items-center gap-3 px-4 py-3 rounded-2xl ring-1 ring-slate-300/80 dark:ring-slate-700 hover:ring-primary/60 bg-white dark:bg-slate-900 transition shadow-sm">
+          <span class="inline-flex items-center justify-center w-6 h-6 rounded bg-[#EA4335] text-white">@</span> Email
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="py-10 border-t border-slate-200/70 dark:border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 text-sm text-slate-500 dark:text-slate-400">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p>© <span id="year"></span> Samson Adewale. All rights reserved.</p>
+        <p>
+          <a class="hover:text-primary" rel="me" href="https://twitter.com/sadewale4" target="_blank">@sadewale4</a>
+          <span class="mx-2">•</span>
+          <a class="hover:text-primary" href="/blog">Blog</a>
+          <span class="mx-2">•</span>
+          <a class="hover:text-primary" href="#projects">Projects</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== Scripts ===== -->
+  <script>
+    // Persisted dark mode
+    const root = document.documentElement;
+    const themeToggle = document.getElementById('themeToggle');
+    const stored = localStorage.getItem('theme');
+    if (stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      root.classList.add('dark');
+    }
+    themeToggle?.addEventListener('click', () => {
+      root.classList.toggle('dark');
+      localStorage.setItem('theme', root.classList.contains('dark') ? 'dark' : 'light');
     });
 
-    const toggle = (target) => {
-        const panelBody = document.getElementById(target);
-        const panelTitle = panelBody.previousElementSibling.querySelector('h3');
-        
-        if (panelBody.style.display !== 'block') {
-            panelBody.style.display = 'block';
-            panelTitle.classList.add('expanded');
-        } else {
-            panelBody.style.display = 'none';
-            panelTitle.classList.remove('expanded');
-        }
-    };
-</script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
-
 </html>
