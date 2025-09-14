@@ -16,7 +16,7 @@ I specialize in **Cloud Security**, **DevSecOps**, and **Cloud-Native** architec
 
 ## Let's Connect
 
-- 🌐 **Website**: [sadewale4.github.io](https://sadewale4.github.io)
+- 🌐 **Website**: [samsonadewale.com](https://samsonadewale.com)
 - 💼 **LinkedIn**: [Samson Adewale](https://linkedin.com/in/samson-adewale-seceng)
 - 🐦 **Twitter**: [@sadewal1](https://twitter.com/sadewal1)
 - 💻 **GitHub**: [@sadewale4](https://github.com/sadewale4)
