@@ -1,6 +1,6 @@
 # Jekyll Configuration for Samson Adewale's Website
 title: Samson Adewale
-description: Senior Cybersecurity Engineer focused on Cloud Security, DevSecOps, and Cloud‑Native architectures
+description: Senior Cybersecurity Engineer focused on Cloud Security, DevSecOps, Cloud‑Native architectures, and AI/LLM applications in security operations
 author: Samson Adewale
 email: samson@example.com
 url: https://sadewale4.github.io
@@ -9,6 +9,19 @@ baseurl: ""
 # Markdown processor
 markdown: kramdown
 highlighter: rouge
+sass:
+  sass_dir: _sass
+  style: compressed
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+    span:
+      line_numbers: false
+    block:
+      line_numbers: false
 
 # Blog settings
 permalink: /:year/:month/:day/:title/

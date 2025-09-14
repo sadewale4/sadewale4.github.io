@@ -1,105 +1,27 @@
-# Samson Adewale - Personal Website
+# Samson Adewale
 
-Welcome to my personal website repository! This is a modern, responsive portfolio website built with HTML, CSS, and JavaScript, hosted on GitHub Pages.
+👋 Hi there! I'm Samson, a Senior Cybersecurity Engineer passionate about building secure, scalable systems.
 
-## 🌟 Features
+## About Me
 
-- **Modern Design**: Clean, professional layout with gradient backgrounds and smooth animations
-- **Responsive**: Fully responsive design that works on all devices
-- **Fast Loading**: Optimized for performance with minimal dependencies
-- **SEO Friendly**: Proper meta tags, structured data, and semantic HTML
-- **Accessible**: Built with accessibility best practices in mind
+I specialize in **Cloud Security**, **DevSecOps**, and **Cloud-Native** architectures. I design secure platforms, automate incident response, and build tooling for high-velocity teams. As an AI enthusiast, I'm passionate about applying **AI and LLM technologies** to enhance security operations, optimize threat detection, and streamline cybersecurity workflows.
 
-## 🚀 Live Website
+## What I Do
 
-Visit my website at: [https://sadewale4.github.io](https://sadewale4.github.io)
+- 🔒 **Cloud Security**: Designing and implementing secure cloud architectures
+- 🚀 **DevSecOps**: Integrating security into development workflows
+- ☁️ **Cloud-Native**: Building scalable, resilient applications
+- 🤖 **AI in Security**: Leveraging AI and LLMs for security optimization
+- 🛠️ **Automation**: Creating tools and processes for security teams
 
-## 🛠️ Technologies Used
+## Let's Connect
 
-- **HTML5**: Semantic markup and modern HTML features
-- **CSS3**: Custom styling with gradients, animations, and responsive design
-- **JavaScript**: Interactive elements and smooth user experience
-- **Bootstrap**: Minimal Bootstrap components for layout and responsiveness
-- **Font Awesome**: Icons for enhanced visual appeal
-- **GitHub Pages**: Free hosting and deployment
-
-## 📁 Project Structure
-
-```
-sadewale4.github.io/
-├── index.html          # Main homepage
-├── 404.html           # Custom 404 error page
-├── css/
-│   ├── default.css    # Custom styles
-│   ├── bootstrap.min.css  # Bootstrap components
-│   └── fa.min.css     # Font Awesome icons
-├── img/               # Images and icons
-│   ├── twee.svg       # Twitter/X logo
-│   ├── in.png         # LinkedIn icon
-│   ├── tw.png         # Twitter icon
-│   └── github.png     # GitHub icon
-├── robots.txt         # SEO configuration
-└── README.md          # This file
-```
-
-## 🎨 Design Features
-
-- **Gradient Backgrounds**: Beautiful purple-blue gradients throughout the site
-- **Hover Effects**: Smooth animations and transitions on interactive elements
-- **Card-based Layout**: Modern card design for projects and content sections
-- **Typography**: Clean, readable fonts with proper hierarchy
-- **Color Scheme**: Professional color palette with consistent branding
-
-## 📱 Responsive Design
-
-The website is fully responsive and optimized for:
-- Desktop computers (1200px+)
-- Tablets (768px - 1199px)
-- Mobile phones (320px - 767px)
-
-## 🔧 Customization
-
-To customize this website for your own use:
-
-1. **Update Personal Information**: Modify the content in `index.html`
-2. **Change Colors**: Update the gradient colors in `css/default.css`
-3. **Add Projects**: Replace the project sections with your own work
-4. **Update Social Links**: Change the social media links to your profiles
-5. **Add Images**: Replace placeholder images with your own photos and screenshots
-
-## 🚀 Deployment
-
-This website is automatically deployed using GitHub Pages:
-
-1. Push changes to the `main` branch
-2. GitHub Pages automatically builds and deploys the site
-3. Your changes are live at `https://sadewale4.github.io`
-
-## 📈 Performance
-
-- **Lighthouse Score**: Optimized for high performance scores
-- **Loading Speed**: Fast loading times with minimal external dependencies
-- **SEO**: Proper meta tags and structured data for search engines
-
-## 🤝 Contributing
-
-While this is my personal website, I welcome feedback and suggestions! Feel free to:
-
-- Report bugs or issues
-- Suggest improvements
-- Share ideas for new features
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-## 📞 Contact
-
-- **Website**: [https://sadewale4.github.io](https://sadewale4.github.io)
-- **GitHub**: [@sadewale4](https://github.com/sadewale4)
-- **LinkedIn**: [Samson Adewale](https://linkedin.com/in/samson-adewale)
-- **Twitter**: [@sadewale4](https://twitter.com/sadewale4)
+- 🌐 **Website**: [sadewale4.github.io](https://sadewale4.github.io)
+- 💼 **LinkedIn**: [Samson Adewale](https://linkedin.com/in/samson-adewale-seceng)
+- 🐦 **Twitter**: [@sadewal1](https://twitter.com/sadewal1)
+- 💻 **GitHub**: [@sadewale4](https://github.com/sadewale4)
+- 📧 **Email**: [samwale008@gmail.com](mailto:samwale008@gmail.com)
 
 ---
 
-*Built with ❤️ using modern web technologies*
+*Always learning, always building, always securing* 🛡️

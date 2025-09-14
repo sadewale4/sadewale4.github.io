@@ -1,0 +1,98 @@
+/*!
+ * Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+
+/* Essential Font Awesome icons for Samson Adewale's website */
+
+@font-face {
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-weight: 900;
+  font-display: block;
+  src: url("../fonts/fa-solid-900.woff2") format("woff2");
+}
+
+.fas {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+/* Icons used in the website */
+.fa-briefcase:before {
+  content: "\f0b1";
+}
+
+.fa-microchip:before {
+  content: "\f2db";
+}
+
+.fa-globe-europe:before {
+  content: "\f7a2";
+}
+
+.fa-globe-americas:before {
+  content: "\f57d";
+}
+
+.fa-code:before {
+  content: "\f121";
+}
+
+.fa-rocket:before {
+  content: "\f135";
+}
+
+.fa-twitter:before {
+  content: "\f099";
+}
+
+.fa-github:before {
+  content: "\f09b";
+}
+
+.fa-linkedin:before {
+  content: "\f08c";
+}
+
+.fa-envelope:before {
+  content: "\f0e0";
+}
+
+/* Brand icons */
+.fab {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Font Awesome 5 Brands";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("../fonts/fa-brands-400.woff2") format("woff2");
+}
+
+.fab.fa-twitter:before {
+  content: "\f099";
+}
+
+.fab.fa-github:before {
+  content: "\f09b";
+}
+
+.fab.fa-linkedin:before {
+  content: "\f08c";
+}
+
+/* Fallback icons using Unicode */
+.fas.fa-briefcase:before { content: "💼"; }
+.fas.fa-microchip:before { content: "🔧"; }
+.fas.fa-globe-europe:before { content: "🌍"; }
+.fas.fa-globe-americas:before { content: "🌎"; }
+.fas.fa-code:before { content: "💻"; }
+.fas.fa-rocket:before { content: "🚀"; }
+.fas.fa-twitter:before { content: "🐦"; }
+.fas.fa-github:before { content: "📦"; }
+.fas.fa-linkedin:before { content: "💼"; }
+.fas.fa-envelope:before { content: "✉️"; }

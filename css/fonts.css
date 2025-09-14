@@ -1,0 +1,55 @@
+/* SF Mono Font Implementation */
+/* Apple's beautiful monospace font for code */
+
+/* SF Mono - Regular */
+@font-face {
+  font-family: 'SF Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/SF-Mono-Regular.woff2') format('woff2'),
+       url('../fonts/SF-Mono-Regular.woff') format('woff'),
+       url('../fonts/SF-Mono-Regular.otf') format('opentype');
+  font-display: swap;
+}
+
+/* SF Mono - Medium */
+@font-face {
+  font-family: 'SF Mono';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/SF-Mono-Medium.woff2') format('woff2'),
+       url('../fonts/SF-Mono-Medium.woff') format('woff'),
+       url('../fonts/SF-Mono-Medium.otf') format('opentype');
+  font-display: swap;
+}
+
+/* SF Mono - Semibold */
+@font-face {
+  font-family: 'SF Mono';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/SF-Mono-Semibold.woff2') format('woff2'),
+       url('../fonts/SF-Mono-Semibold.woff') format('woff'),
+       url('../fonts/SF-Mono-Semibold.otf') format('opentype');
+  font-display: swap;
+}
+
+/* SF Mono - Bold */
+@font-face {
+  font-family: 'SF Mono';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/SF-Mono-Bold.woff2') format('woff2'),
+       url('../fonts/SF-Mono-Bold.woff') format('woff'),
+       url('../fonts/SF-Mono-Bold.otf') format('opentype');
+  font-display: swap;
+}
+
+/* Fallback to system fonts */
+@font-face {
+  font-family: 'SF Mono Fallback';
+  font-style: normal;
+  font-weight: 400;
+  src: local('SF Mono'), local('Monaco'), local('Menlo'), local('Consolas'), local('Liberation Mono'), local('Courier New'), monospace;
+  font-display: swap;
+}
