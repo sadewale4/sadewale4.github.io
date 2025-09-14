@@ -34,7 +34,7 @@ These are the technical domains and themes that I live in, where most of my work
 - **Cloud Security** – identity & access management, data protection & encryption, network segmentation, governance & compliance across AWS, Azure, GCP, hybrid & multi-cloud setups.  
 - **DevSecOps** – integrating security early and often in development, IaC scanning, automated testing, building security into deployment pipelines, vulnerability management.  
 - **Cloud-Native Architecture** – containers, Kubernetes, service meshes, serverless, runtime security, observability, drift detection and securing ephemeral and dynamic infrastructure.  
-- **AI & LLMs in Security Operations** – automating threat detection, improving alert triage, accelerating response, improving context awareness, while carefully managing ethics, trust, errors.
+- **AI & LLMs in Security Operations** – automating threat detection, improving alert triage, accelerating response, improving context awareness, while carefully managing ethics, trust, errors. 
 
 ---
 
