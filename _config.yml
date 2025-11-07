@@ -24,19 +24,28 @@ kramdown:
       line_numbers: false
 
 # Blog settings
-permalink: /:year/:month/:day/:title/
+permalink: /blog/:year/:month/:day/:title/
 
 # Collections
 collections:
   posts:
     output: true
-    permalink: /:collection/:year/:month/:day/:title/
+    permalink: /blog/:year/:month/:day/:title/
+  publications:
+    output: true
+    permalink: /publications/:path/
 
 # Defaults
 defaults:
   - scope:
       path: ""
       type: "posts"
+    values:
+      layout: "post"
+      author: "Samson Adewale"
+  - scope:
+      path: ""
+      type: "publications"
     values:
       layout: "post"
       author: "Samson Adewale"

@@ -59,3 +59,14 @@ jspm_packages/
 # Backup files
 *.bak
 *.backup
+
+# Jekyll
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Bundler
+.bundle/
+vendor/
+Gemfile.lock

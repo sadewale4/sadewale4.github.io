@@ -47,6 +47,15 @@ title: Samson Adewale
     .link-underline { position: relative; }
     .link-underline::after { content: ""; position: absolute; left: 0; bottom: -2px; width: 100%; height: 2px; background: currentColor; transform: scaleX(0); transform-origin: left; transition: transform .25s ease; opacity: .2; }
     .link-underline:hover::after { transform: scaleX(1); opacity: .35; }
+    
+    /* Line clamp for truncating text */
+    .line-clamp-2 {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
   </style>
 </head>
 
@@ -57,7 +66,7 @@ title: Samson Adewale
       <div class="flex items-center justify-between h-16">
         <a href="#home" onclick="smoothScrollTo('home'); return false;" class="font-semibold text-lg tracking-tight">Samson <span class="text-primary">Adewale</span></a>
         <nav class="hidden md:flex items-center gap-6 text-sm">
-          <a href="#blog" onclick="smoothScrollTo('blog'); return false;" class="hover:text-primary link-underline">Blog</a>
+          <a href="#publications" onclick="smoothScrollTo('publications'); return false;" class="hover:text-primary link-underline">Publications</a>
           <a href="#projects" onclick="smoothScrollTo('projects'); return false;" class="hover:text-primary link-underline">Projects</a>
           <a href="#contact" onclick="smoothScrollTo('contact'); return false;" class="hover:text-primary link-underline">Connect</a>
           <a href="https://github.com/sadewale4" target="_blank" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl ring-1 ring-slate-300/70 dark:ring-slate-700 hover:ring-primary/60 transition"><img src="img/github.svg" alt="GitHub" class="h-4 w-4 text-slate-800 dark:text-slate-200"/> GitHub</a>
@@ -72,7 +81,7 @@ title: Samson Adewale
       </div>
       <div id="mnav" class="md:hidden pb-3 hidden">
         <nav class="flex flex-col gap-2 text-sm">
-          <a href="#blog" onclick="smoothScrollTo('blog'); return false;" class="hover:text-primary">Blog</a>
+          <a href="#publications" onclick="smoothScrollTo('publications'); return false;" class="hover:text-primary">Publications</a>
           <a href="#projects" onclick="smoothScrollTo('projects'); return false;" class="hover:text-primary">Projects</a>
           <a href="#contact" onclick="smoothScrollTo('contact'); return false;" class="hover:text-primary">Connect</a>
           <a href="https://github.com/sadewale4" target="_blank" class="hover:text-primary">GitHub</a>
@@ -85,9 +94,10 @@ title: Samson Adewale
   <section id="home" class="relative overflow-hidden">
     <div class="absolute inset-0 bg-gradient-to-br from-primary/10 via-primary/0 to-primary/20 dark:from-primary/15 dark:to-primary/30 pointer-events-none"></div>
     <div class="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
-      <div class="grid md:grid-cols-[180px_1fr] gap-8 items-center">
-        <div class="w-[160px] h-[160px] rounded-2xl overflow-hidden ring-2 ring-white/70 dark:ring-slate-800 shadow-soft">
-          <img src="img/profile-photo.png" alt="Photo of Samson Adewale" class="w-full h-full object-cover" />
+      <div class="grid md:grid-cols-[200px_1fr] gap-8 items-center">
+        <div class="relative w-[180px] h-[220px] rounded-xl overflow-hidden shadow-2xl ring-1 ring-slate-900/10 dark:ring-slate-100/10">
+          <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-30"></div>
+          <img src="img/profile-photo.jpg" alt="Photo of Samson Adewale" class="relative w-full h-full object-cover object-center" />
         </div>
         <div>
           <h1 class="text-3xl sm:text-5xl font-extrabold leading-tight">Samson Adewale</h1>
@@ -98,8 +108,8 @@ title: Samson Adewale
             <li class="px-3 py-1 rounded-full bg-primary/10 text-primary text-sm">IR · Forensics · Tines</li>
           </ul>
           <div class="mt-8 flex flex-wrap gap-3">
-            <a href="#projects" onclick="smoothScrollTo('projects'); return false;" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-primary text-white shadow-soft hover:opacity-95 transition">View Projects</a>
-            <a href="#blog" onclick="smoothScrollTo('blog'); return false;" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl ring-1 ring-slate-300/80 dark:ring-slate-700 hover:ring-primary/60 transition">Read Blog</a>
+            <a href="#publications" onclick="smoothScrollTo('publications'); return false;" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-primary text-white shadow-soft hover:opacity-95 transition">View Publications</a>
+            <a href="#projects" onclick="smoothScrollTo('projects'); return false;" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl ring-1 ring-slate-300/80 dark:ring-slate-700 hover:ring-primary/60 transition">View Projects</a>
           </div>
           <div class="mt-6 text-sm text-slate-500 dark:text-slate-400">
             <span class="inline-flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-slate-500 dark:text-slate-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.14 2 5 5.14 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.86-3.14-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/></svg> Atlanta, GA, United States</span>
@@ -109,42 +119,122 @@ title: Samson Adewale
     </div>
   </section>
 
-  <!-- ===== Blog ===== -->
-  <section id="blog" class="py-12 sm:py-16 border-t border-slate-200/70 dark:border-slate-800">
+  <!-- ===== Publications ===== -->
+  <section id="publications" class="py-12 sm:py-16 border-t border-slate-200/70 dark:border-slate-800">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <div class="flex items-end justify-between gap-4">
-        <h2 class="text-2xl sm:text-3xl font-bold">Latest Blog Posts</h2>
-        <button id="toggleViewAll" class="text-sm link-underline hover:text-primary transition">View all →</button>
+      <div class="flex items-end justify-between gap-4 mb-4">
+        <h2 class="text-2xl sm:text-3xl font-bold">Publications & Presentations</h2>
+      </div>
+      <p class="text-slate-600 dark:text-slate-300 mb-6">Research papers, conference presentations, whitepapers, and technical writings on cybersecurity, cloud security, and AI in security operations.</p>
+      
+      <!-- Filter Buttons -->
+      <div class="flex flex-wrap gap-2 mb-8">
+        <button class="pub-filter-btn active px-4 py-2 rounded-xl text-sm font-medium transition-all ring-1 ring-slate-300/70 dark:ring-slate-700" data-filter="all">
+          All
+        </button>
+        <button class="pub-filter-btn px-4 py-2 rounded-xl text-sm font-medium transition-all ring-1 ring-slate-300/70 dark:ring-slate-700" data-filter="presentation">
+          Presentations
+        </button>
+        <button class="pub-filter-btn px-4 py-2 rounded-xl text-sm font-medium transition-all ring-1 ring-slate-300/70 dark:ring-slate-700" data-filter="paper">
+          Papers
+        </button>
+        <button class="pub-filter-btn px-4 py-2 rounded-xl text-sm font-medium transition-all ring-1 ring-slate-300/70 dark:ring-slate-700" data-filter="blog">
+          Blog Posts
+        </button>
       </div>
 
-      <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- All posts in one grid -->
-        {% for post in site.posts %}
-        <div class="blog-post-card p-5 rounded-2xl ring-1 ring-slate-200/80 dark:ring-slate-800 bg-white dark:bg-slate-900 hover:ring-primary/60 hover:shadow-soft transition-all duration-200" 
-             data-post-url="{{ post.url | relative_url }}" 
-             data-post-title="{{ post.title }}" 
-             data-post-date="{{ post.date | date: '%B %d, %Y' }}" 
-             data-post-author="{{ post.author | default: site.author }}"
-             data-post-read-time="{{ post.read_time }}"
-             data-post-description="{{ post.description }}"
-             {% if forloop.index > 3 %}style="display: none;"{% endif %}>
-          <h3 class="font-semibold text-lg cursor-pointer hover:text-primary transition-colors" 
-              onclick="window.open('{{ post.url | relative_url }}', '_blank')">{{ post.title }}</h3>
-          <p class="text-sm text-slate-600 dark:text-slate-300 mt-2">{{ post.description }}</p>
-          <div class="text-xs text-slate-500 mt-2">{{ post.date | date: "%b %d, %Y" }}</div>
-          <div class="mt-3 text-xs text-primary font-medium cursor-pointer hover:underline read-more-btn" 
-               data-post-url="{{ post.url | relative_url }}" 
-               data-post-title="{{ post.title }}" 
-               data-post-date="{{ post.date | date: '%B %d, %Y' }}" 
-               data-post-author="{{ post.author | default: site.author }}"
-               data-post-read-time="{{ post.read_time }}"
-               data-post-description="{{ post.description }}">Click to read more →</div>
-        </div>
+      <!-- Publications List -->
+      <div class="space-y-4">
+        {% assign sorted_pubs = site.publications | sort: 'date' | reverse %}
+        {% for pub in sorted_pubs %}
+        <article class="publication-card p-6 rounded-2xl ring-1 ring-slate-200/80 dark:ring-slate-800 bg-white dark:bg-slate-900 hover:ring-primary/60 hover:shadow-soft transition-all duration-200" data-type="{{ pub.type }}">
+          <div class="flex flex-col md:flex-row md:items-start gap-6">
+            <!-- Date Badge -->
+            <div class="flex-shrink-0">
+              <div class="text-center px-4 py-2 rounded-xl bg-primary/10 dark:bg-primary/20">
+                <div class="text-2xl font-bold text-primary">{{ pub.date | date: "%b" }}</div>
+                <div class="text-sm text-primary">{{ pub.date | date: "%Y" }}</div>
+              </div>
+            </div>
+            
+            <!-- Content -->
+            <div class="flex-grow min-w-0">
+              <!-- Type Badge & Status -->
+              <div class="flex flex-wrap items-center gap-2 mb-2">
+                <span class="inline-flex items-center px-2.5 py-1 rounded-lg text-xs font-medium 
+                  {% if pub.type == 'presentation' %}bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300{% endif %}
+                  {% if pub.type == 'paper' %}bg-purple-100 text-purple-700 dark:bg-purple-900 dark:text-purple-300{% endif %}
+                  {% if pub.type == 'blog' %}bg-amber-100 text-amber-700 dark:bg-amber-900 dark:text-amber-300{% endif %}">
+                  {{ pub.type | capitalize }}
+                </span>
+                {% if pub.status == 'upcoming' %}
+                <span class="inline-flex items-center px-2.5 py-1 rounded-lg text-xs font-medium bg-orange-100 text-orange-700 dark:bg-orange-900 dark:text-orange-300">
+                  Upcoming
+                </span>
+                {% endif %}
+              </div>
+              
+              <!-- Title & Venue -->
+              <a href="{{ pub.url | relative_url }}" class="block group">
+                <h3 class="text-lg font-semibold text-slate-900 dark:text-slate-100 mb-1 group-hover:text-primary transition-colors cursor-pointer">{{ pub.title }}</h3>
+              </a>
+              {% if pub.venue %}
+              <p class="text-sm text-slate-600 dark:text-slate-400 mb-2">{{ pub.venue }}{% if pub.location %} • {{ pub.location }}{% endif %}</p>
+              {% endif %}
+              
+              <!-- Description -->
+              <p class="text-sm text-slate-600 dark:text-slate-300 mb-3 line-clamp-2">{{ pub.description }}</p>
+              
+              <!-- Tags -->
+              {% if pub.tags %}
+              <div class="flex flex-wrap gap-1.5 mb-3">
+                {% for tag in pub.tags limit:5 %}
+                <span class="text-xs px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">{{ tag }}</span>
+                {% endfor %}
+              </div>
+              {% endif %}
+              
+              <!-- Links -->
+              <div class="flex flex-wrap items-center gap-3">
+                {% if pub.youtube != '' %}
+                <a href="{{ pub.youtube }}" target="_blank" class="inline-flex items-center gap-1.5 text-sm text-slate-600 dark:text-slate-400 hover:text-red-600 dark:hover:text-red-400 transition-colors" title="Watch on YouTube">
+                  <img src="img/youtube.svg" alt="YouTube" class="w-4 h-4 text-red-600"/>
+                  <span>Video</span>
+                </a>
+                {% endif %}
+                {% if pub.github != '' %}
+                <a href="{{ pub.github }}" target="_blank" class="inline-flex items-center gap-1.5 text-sm text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors" title="View on GitHub">
+                  <img src="img/github.svg" alt="GitHub" class="w-4 h-4"/>
+                  <span>Code</span>
+                </a>
+                {% endif %}
+                {% if pub.slides_url != '' %}
+                <a href="{{ pub.slides_url }}" target="_blank" class="inline-flex items-center gap-1.5 text-sm text-slate-600 dark:text-slate-400 hover:text-primary transition-colors" title="Download Slides">
+                  <img src="img/file.svg" alt="Slides" class="w-4 h-4"/>
+                  <span>Slides</span>
+                </a>
+                {% endif %}
+                {% if pub.paper_url != '' %}
+                <a href="{{ pub.paper_url }}" target="_blank" class="inline-flex items-center gap-1.5 text-sm text-slate-600 dark:text-slate-400 hover:text-primary transition-colors" title="Read Paper">
+                  <img src="img/file.svg" alt="Paper" class="w-4 h-4"/>
+                  <span>Paper</span>
+                </a>
+                {% endif %}
+                {% if pub.external_url != '' %}
+                <a href="{{ pub.external_url }}" target="_blank" class="inline-flex items-center gap-1.5 text-sm text-slate-600 dark:text-slate-400 hover:text-primary transition-colors" title="External Link">
+                  <img src="img/link.svg" alt="Link" class="w-4 h-4"/>
+                  <span>Article</span>
+                </a>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </article>
         {% endfor %}
         
-        {% if site.posts.size == 0 %}
-        <div class="col-span-full text-center py-8 text-slate-500">
-          <p>No blog posts found.</p>
+        {% if site.publications.size == 0 %}
+        <div class="text-center py-12 text-slate-500">
+          <p>No publications found.</p>
         </div>
         {% endif %}
       </div>
@@ -158,18 +248,18 @@ title: Samson Adewale
       <div class="mt-8 grid md:grid-cols-2 gap-6">
         <!-- Portfolio Website Card -->
         <article class="rounded-2xl overflow-hidden ring-1 ring-slate-200/80 dark:ring-slate-800 bg-white dark:bg-slate-900 shadow-sm hover:shadow-soft transition">
-          <div class="aspect-[4/3] bg-gradient-to-br from-emerald-50 to-teal-100 dark:from-slate-800 dark:to-slate-700 flex items-center justify-center">
-            <div class="text-center p-6">
-              <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl flex items-center justify-center">
-                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div class="aspect-[16/7] bg-gradient-to-br from-emerald-50 to-teal-100 dark:from-slate-800 dark:to-slate-700 flex items-center justify-center">
+            <div class="text-center p-4">
+              <div class="w-12 h-12 mx-auto mb-2 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl flex items-center justify-center">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
                 </svg>
               </div>
-              <h4 class="font-semibold text-slate-800 dark:text-slate-200">Portfolio</h4>
-              <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">Personal Website</p>
+              <h4 class="font-semibold text-slate-800 dark:text-slate-200 text-sm">Portfolio</h4>
+              <p class="text-xs text-slate-600 dark:text-slate-400">Personal Website</p>
             </div>
           </div>
-          <div class="p-6">
+          <div class="p-5">
             <h3 class="text-lg font-semibold">Personal Portfolio Website</h3>
             <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Responsive, accessible portfolio powered by GitHub Pages + Jekyll. Clean HTML, modern CSS, and minimal JS with dark‑mode support.</p>
             <dl class="mt-4 grid grid-cols-2 gap-2 text-sm">
@@ -185,18 +275,18 @@ title: Samson Adewale
 
         <!-- ZainGuard AI Platform Card -->
         <article class="rounded-2xl overflow-hidden ring-1 ring-slate-200/80 dark:ring-slate-800 bg-white dark:bg-slate-900 shadow-sm hover:shadow-soft transition">
-          <div class="aspect-[4/3] bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-slate-800 dark:to-slate-700 flex items-center justify-center">
-            <div class="text-center p-6">
-              <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center">
-                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div class="aspect-[16/7] bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-slate-800 dark:to-slate-700 flex items-center justify-center">
+            <div class="text-center p-4">
+              <div class="w-12 h-12 mx-auto mb-2 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
                 </svg>
               </div>
-              <h4 class="font-semibold text-slate-800 dark:text-slate-200">ZainGuard AI</h4>
-              <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">SecOps AI Platform</p>
+              <h4 class="font-semibold text-slate-800 dark:text-slate-200 text-sm">ZainGuard AI</h4>
+              <p class="text-xs text-slate-600 dark:text-slate-400">SecOps AI Platform</p>
             </div>
           </div>
-          <div class="p-6">
+          <div class="p-5">
             <h3 class="text-lg font-semibold">ZainGuard AI Platform</h3>
             <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Open-source Security Operations AI agent platform for automating cybersecurity tasks including threat detection, incident response, and vulnerability management.</p>
             <dl class="mt-4 grid grid-cols-2 gap-2 text-sm">
@@ -212,18 +302,18 @@ title: Samson Adewale
 
         <!-- Appsudo Platform Card -->
         <article class="rounded-2xl overflow-hidden ring-1 ring-slate-200/80 dark:ring-slate-800 bg-white dark:bg-slate-900 shadow-sm hover:shadow-soft transition">
-          <div class="aspect-[4/3] bg-gradient-to-br from-purple-50 to-pink-100 dark:from-slate-800 dark:to-slate-700 flex items-center justify-center">
-            <div class="text-center p-6">
-              <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center">
-                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div class="aspect-[16/7] bg-gradient-to-br from-purple-50 to-pink-100 dark:from-slate-800 dark:to-slate-700 flex items-center justify-center">
+            <div class="text-center p-4">
+              <div class="w-12 h-12 mx-auto mb-2 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
                 </svg>
               </div>
-              <h4 class="font-semibold text-slate-800 dark:text-slate-200">Appsudo</h4>
-              <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">Social Platform</p>
+              <h4 class="font-semibold text-slate-800 dark:text-slate-200 text-sm">Appsudo</h4>
+              <p class="text-xs text-slate-600 dark:text-slate-400">Social Platform</p>
             </div>
           </div>
-          <div class="p-6">
+          <div class="p-5">
             <h3 class="text-lg font-semibold">Appsudo Platform</h3>
             <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Social media meets digital experiences - interactive apps and immersive content that redefine how you connect with content and community.</p>
             <dl class="mt-4 grid grid-cols-2 gap-2 text-sm">
@@ -233,6 +323,38 @@ title: Samson Adewale
             <div class="mt-4 flex flex-wrap gap-3 text-sm">
               <a class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl ring-1 ring-slate-300/70 dark:ring-slate-700 hover:ring-primary/60 transition" href="https://www.appsudo.com/" target="_blank">Website</a>
               <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-purple-100 dark:bg-purple-900 text-purple-700 dark:text-purple-300">Private Repo</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- SecOps Content Hub Card -->
+        <article class="rounded-2xl overflow-hidden ring-1 ring-slate-200/80 dark:ring-slate-800 bg-white dark:bg-slate-900 shadow-sm hover:shadow-soft transition">
+          <div class="aspect-[16/7] bg-gradient-to-br from-orange-50 to-red-100 dark:from-slate-800 dark:to-slate-700 flex items-center justify-center">
+            <div class="text-center p-4">
+              <div class="w-12 h-12 mx-auto mb-2 bg-gradient-to-br from-orange-500 to-red-600 rounded-xl flex items-center justify-center">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                </svg>
+              </div>
+              <h4 class="font-semibold text-slate-800 dark:text-slate-200 text-sm">SecOps Hub</h4>
+              <p class="text-xs text-slate-600 dark:text-slate-400">Detection Library</p>
+            </div>
+          </div>
+          <div class="p-5">
+            <h3 class="text-lg font-semibold">SecOps Content Hub</h3>
+            <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Open-source repository of standardized security operations content - detection rules, threat hunting queries, and response playbooks in vendor-agnostic format.</p>
+            <dl class="mt-4 grid grid-cols-2 gap-2 text-sm">
+              <div><dt class="text-slate-500">Status</dt><dd>In Development</dd></div>
+              <div><dt class="text-slate-500">Tech</dt><dd>Python, JSON, YAML</dd></div>
+            </dl>
+            <div class="mt-4 flex flex-wrap gap-3 text-sm">
+              <a class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl ring-1 ring-slate-300/70 dark:ring-slate-700 hover:ring-primary/60 transition" href="https://github.com/sadewale4/secops-content-hub" target="_blank">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                Coming Soon
+              </a>
+              <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-orange-100 dark:bg-orange-900 text-orange-700 dark:text-orange-300">Open Source</span>
             </div>
           </div>
         </article>
@@ -273,56 +395,13 @@ title: Samson Adewale
         <p>
           <a class="hover:text-primary" rel="me" href="https://twitter.com/sadewale4" target="_blank">@sadewale4</a>
           <span class="mx-2">•</span>
-          <a class="hover:text-primary" href="#blog">Blog</a>
+          <a class="hover:text-primary" href="#publications">Publications</a>
           <span class="mx-2">•</span>
           <a class="hover:text-primary" href="#projects">Projects</a>
         </p>
       </div>
     </div>
   </footer>
-
-  <!-- ===== Blog Post Modal ===== -->
-  <div id="blogModal" class="fixed inset-0 z-50 hidden overflow-y-auto">
-    <div class="flex min-h-full items-center justify-center p-4">
-      <!-- Backdrop -->
-      <div class="fixed inset-0 bg-black/50 backdrop-blur-sm" onclick="closeBlogModal()"></div>
-      
-      <!-- Modal Content -->
-      <div class="relative w-full max-w-4xl max-h-[90vh] bg-white dark:bg-slate-900 rounded-2xl shadow-2xl overflow-hidden">
-        <!-- Modal Header -->
-        <div class="sticky top-0 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 px-6 py-4">
-          <div class="flex items-center justify-between">
-            <div>
-              <h2 id="modalTitle" class="text-xl font-bold"></h2>
-              <div id="modalMeta" class="text-sm text-slate-500 dark:text-slate-400 mt-1"></div>
-            </div>
-            <button onclick="closeBlogModal()" class="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-xl transition">
-              <svg class="w-5 h-5 text-slate-500 dark:text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-              </svg>
-            </button>
-          </div>
-        </div>
-        
-        <!-- Modal Body -->
-        <div class="px-6 py-6 overflow-y-auto max-h-[calc(90vh-120px)]">
-          <div id="modalContent" class="text-slate-700 dark:text-slate-300 leading-relaxed">
-            <!-- Content will be loaded here -->
-          </div>
-        </div>
-        
-        <!-- Modal Footer -->
-        <div class="sticky bottom-0 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 px-6 py-4">
-          <div class="flex items-center justify-between">
-            <a id="modalFullPost" href="#" target="_blank" class="text-primary hover:underline text-sm">Read full post →</a>
-            <button onclick="closeBlogModal()" class="px-4 py-2 bg-primary text-white rounded-xl hover:opacity-95 transition text-sm">
-              Close
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <!-- ===== Scripts ===== -->
   <script>
@@ -340,144 +419,6 @@ title: Samson Adewale
 
     // Year
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Blog Modal Functions
-    function openBlogModal(postData) {
-      const modal = document.getElementById('blogModal');
-      const modalTitle = document.getElementById('modalTitle');
-      const modalMeta = document.getElementById('modalMeta');
-      const modalContent = document.getElementById('modalContent');
-      const modalFullPost = document.getElementById('modalFullPost');
-      
-      // Set title and meta
-      modalTitle.textContent = postData.title;
-      
-      let metaText = postData.date + ' • ' + postData.author;
-      if (postData.readTime) {
-        metaText += ' • ' + postData.readTime + ' min read';
-      }
-      modalMeta.textContent = metaText;
-      
-      // Set full post link
-      modalFullPost.href = postData.url;
-      
-      // Load content
-      loadBlogPostContent(postData.url, modalContent);
-      
-      // Show modal
-      modal.classList.remove('hidden');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeBlogModal() {
-      const modal = document.getElementById('blogModal');
-      modal.classList.add('hidden');
-      document.body.style.overflow = 'auto';
-    }
-
-    async function loadBlogPostContent(postUrl, contentElement) {
-      try {
-        contentElement.innerHTML = '<div class="flex items-center justify-center py-8"><div class="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div></div>';
-        
-        const response = await fetch(postUrl);
-        const html = await response.text();
-        
-        // Create a temporary DOM element to parse the HTML
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(html, 'text/html');
-        
-        // Extract the post content
-        const postContent = doc.querySelector('.post-content');
-        if (postContent) {
-          contentElement.innerHTML = postContent.innerHTML;
-        } else {
-          contentElement.innerHTML = '<p class="text-slate-500">Content could not be loaded. Please try the full post link.</p>';
-        }
-      } catch (error) {
-        console.error('Error loading blog post:', error);
-        contentElement.innerHTML = '<p class="text-red-500">Error loading content. Please try the full post link.</p>';
-      }
-    }
-
-    // Add view all toggle functionality and read more button handlers
-    document.addEventListener('DOMContentLoaded', function() {
-      const blogCards = document.querySelectorAll('.blog-post-card');
-      const toggleViewAll = document.getElementById('toggleViewAll');
-      const readMoreBtns = document.querySelectorAll('.read-more-btn');
-      
-      let showingAll = false;
-      
-      // Smooth scrolling is handled by the global function above
-      
-      // Read more button click handlers
-      readMoreBtns.forEach(btn => {
-        btn.addEventListener('click', function(e) {
-          e.stopPropagation();
-          const postData = {
-            url: this.dataset.postUrl,
-            title: this.dataset.postTitle,
-            date: this.dataset.postDate,
-            author: this.dataset.postAuthor,
-            readTime: this.dataset.postReadTime,
-            description: this.dataset.postDescription
-          };
-          openBlogModal(postData);
-        });
-      });
-      
-      // View all toggle functionality
-      if (toggleViewAll) {
-        toggleViewAll.addEventListener('click', function() {
-          if (showingAll) {
-            // Show less - hide posts beyond the first 3
-            blogCards.forEach((card, index) => {
-              if (index >= 3) {
-                card.style.display = 'none';
-              }
-            });
-            toggleViewAll.textContent = 'View all →';
-            showingAll = false;
-            
-            // Smooth scroll to blog section
-            const blogSection = document.getElementById('blog');
-            const headerHeight = 80;
-            const elementPosition = blogSection.offsetTop - headerHeight;
-            
-            window.scrollTo({
-              top: elementPosition,
-              behavior: 'smooth'
-            });
-          } else {
-            // Show all - display all posts
-            blogCards.forEach(card => {
-              card.style.display = 'block';
-            });
-            toggleViewAll.textContent = 'Show less ↑';
-            showingAll = true;
-            
-            // Smooth scroll to show the newly revealed posts
-            setTimeout(() => {
-              if (blogCards.length > 3) {
-                const headerHeight = 80;
-                const elementPosition = blogCards[3].offsetTop - headerHeight;
-                
-                window.scrollTo({
-                  top: elementPosition,
-                  behavior: 'smooth'
-                });
-              }
-            }, 100);
-          }
-        });
-      }
-    });
-
-    // Close modal with Escape key
-    document.addEventListener('keydown', function(event) {
-      if (event.key === 'Escape') {
-        closeBlogModal();
-      }
-    });
 
     // Simple smooth scrolling function
     function smoothScrollTo(targetId) {
@@ -514,6 +455,49 @@ title: Samson Adewale
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', setupSmoothScrolling);
     }
+
+    // Publications filtering
+    document.addEventListener('DOMContentLoaded', function() {
+      const filterButtons = document.querySelectorAll('.pub-filter-btn');
+      const publicationCards = document.querySelectorAll('.publication-card');
+      
+      filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const filter = this.getAttribute('data-filter');
+          
+          // Update active state on buttons
+          filterButtons.forEach(btn => {
+            btn.classList.remove('active', 'bg-primary', 'text-white');
+            btn.classList.add('ring-1', 'ring-slate-300/70', 'dark:ring-slate-700');
+          });
+          this.classList.add('active', 'bg-primary', 'text-white');
+          this.classList.remove('ring-1', 'ring-slate-300/70', 'dark:ring-slate-700');
+          
+          // Filter publications
+          publicationCards.forEach(card => {
+            const cardType = card.getAttribute('data-type');
+            if (filter === 'all' || cardType === filter) {
+              card.style.display = 'block';
+              // Add fade-in animation
+              card.style.opacity = '0';
+              setTimeout(() => {
+                card.style.transition = 'opacity 0.3s ease-in-out';
+                card.style.opacity = '1';
+              }, 10);
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+      
+      // Set initial active state
+      const allButton = document.querySelector('.pub-filter-btn[data-filter="all"]');
+      if (allButton && allButton.classList.contains('active')) {
+        allButton.classList.add('bg-primary', 'text-white');
+        allButton.classList.remove('ring-1', 'ring-slate-300/70', 'dark:ring-slate-700');
+      }
+    });
   </script>
 </body>
 </html>
