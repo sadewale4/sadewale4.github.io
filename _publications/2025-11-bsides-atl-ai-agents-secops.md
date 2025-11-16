@@ -8,10 +8,10 @@ description: "A presentation exploring how AI agents can be integrated into secu
 tags: [AI, LLM, Security Operations, Automation, SOC]
 youtube: ""
 github: ""
-slides_url: "/publications/Bsides_Atlanta_2025_Samson_Adewale_AI_SecOps.pptx"
+slides_url: "/publications/Bsides_Atlanta_2025_Samson_Adewale_AI_SecOps.pdf"
 paper_url: ""
 external_url: ""
-status: "upcoming"
+status: "published"
 ---
 
 # AI SecOps: Noise Into Insight
