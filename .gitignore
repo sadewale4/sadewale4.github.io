@@ -51,6 +51,8 @@ jspm_packages/
 
 # dotenv environment variables file
 .env
+.env.local
+.env.*.local
 
 # Temporary files
 *.tmp
@@ -60,7 +62,7 @@ jspm_packages/
 *.bak
 *.backup
 
-# Jekyll
+# Jekyll build output and caches
 _site/
 .sass-cache/
 .jekyll-cache/
@@ -70,3 +72,10 @@ _site/
 .bundle/
 vendor/
 Gemfile.lock
+
+# Ruby gems
+*.gem
+*.rbc
+
+# Local Claude Code context
+CLAUDE.md

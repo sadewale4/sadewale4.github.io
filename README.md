@@ -1,18 +1,8 @@
 # Samson Adewale
 
-👋 Hi there! I'm Samson, a Senior Cybersecurity Engineer passionate about building secure, scalable systems.
+👋 Hi there! I'm Samson — Cybersecurity professional, Platform builder, Open-source contributor and AI enthusiast.
 
-## About Me
-
-I specialize in **Cloud Security**, **DevSecOps**, and **Cloud-Native** architectures. I design secure platforms, automate incident response, and build tooling for high-velocity teams. As an AI enthusiast, I'm passionate about applying **AI and LLM technologies** to enhance security operations, optimize threat detection, and streamline cybersecurity workflows.
-
-## What I Do
-
-- 🔒 **Cloud Security**: Designing and implementing secure cloud architectures
-- 🚀 **DevSecOps**: Integrating security into development workflows
-- ☁️ **Cloud-Native**: Building scalable, resilient applications
-- 🤖 **AI in Security**: Leveraging AI and LLMs for security optimization
-- 🛠️ **Automation**: Creating tools and processes for security teams
+`Cloud Security` `DevSecOps` `DFIR` `Automation` `Prompt Engineering` `Architect`
 
 ## Let's Connect
 
@@ -20,7 +10,8 @@ I specialize in **Cloud Security**, **DevSecOps**, and **Cloud-Native** architec
 - 💼 **LinkedIn**: [Samson Adewale](https://linkedin.com/in/samson-adewale-seceng)
 - 🐦 **Twitter**: [@sadewal1](https://twitter.com/sadewal1)
 - 💻 **GitHub**: [@sadewale4](https://github.com/sadewale4)
-- 📧 **Email**: [samwale008@gmail.com](mailto:samwale008@gmail.com)
+- 🐘 **Mastodon**: [@Sadewale4](https://mastodon.social/@Sadewale4)
+- 🤖 **Reddit**: [u/sadewal1](https://www.reddit.com/user/sadewal1/)
 
 ---
 
