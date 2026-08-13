@@ -94,12 +94,8 @@ title: Samson Adewale
   <section id="home" class="relative overflow-hidden">
     <div class="absolute inset-0 bg-gradient-to-br from-primary/10 via-primary/0 to-primary/20 dark:from-primary/15 dark:to-primary/30 pointer-events-none"></div>
     <div class="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
-      <div class="grid md:grid-cols-[200px_1fr] gap-8 items-center">
-        <div class="relative w-[180px] h-[220px] rounded-xl overflow-hidden shadow-2xl ring-1 ring-slate-900/10 dark:ring-slate-100/10">
-          <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-30"></div>
-          <img src="img/profile-photo.jpg" alt="Photo of Samson Adewale" class="relative w-full h-full object-cover object-center" />
-        </div>
-        <div>
+      <div class="grid md:grid-cols-[1fr_200px] gap-8 items-center">
+        <div class="order-2 md:order-none">
           <h1 class="text-3xl sm:text-5xl font-extrabold leading-tight">Samson Adewale</h1>
           <p class="mt-3 text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-3xl">Cybersecurity professional, Platform builder, Open-source contributor and AI enthusiast.</p>
           <ul class="mt-6 flex flex-wrap gap-2">
@@ -117,6 +113,10 @@ title: Samson Adewale
           <div class="mt-6 text-sm text-slate-500 dark:text-slate-400">
             <span class="inline-flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-slate-500 dark:text-slate-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.14 2 5 5.14 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.86-3.14-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/></svg> Atlanta, GA, United States</span>
           </div>
+        </div>
+        <div class="relative w-[180px] h-[220px] rounded-xl overflow-hidden shadow-2xl ring-1 ring-slate-900/10 dark:ring-slate-100/10 order-1 md:order-none md:justify-self-end">
+          <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-30"></div>
+          <img src="img/profile-photo.jpg" alt="Photo of Samson Adewale" class="relative w-full h-full object-cover object-center" />
         </div>
       </div>
     </div>
@@ -235,11 +235,11 @@ title: Samson Adewale
                 </a>
                 {% endif %}
                 {% if pub.external_url != '' %}
-                <a href="{{ pub.external_url }}" target="_blank" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-medium bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-600 transition-all" title="External Link">
+                <a href="{{ pub.external_url }}" target="_blank" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-medium bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-600 transition-all" title="Event / schedule page">
                   <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
                   </svg>
-                  <span>Article</span>
+                  <span>Schedule</span>
                 </a>
                 {% endif %}
               </div>
@@ -262,6 +262,25 @@ title: Samson Adewale
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <h2 class="text-2xl sm:text-3xl font-bold">Featured Projects</h2>
       <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+        <!-- Agents on Alert Card (DEF CON 34) -->
+        <article class="rounded-2xl p-5 ring-1 ring-slate-200/80 dark:ring-slate-800 bg-white dark:bg-slate-900 shadow-sm hover:shadow-soft transition flex flex-col gap-3 min-h-[300px]">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 flex-shrink-0 bg-gradient-to-br from-sky-500 to-blue-700 rounded-lg flex items-center justify-center">
+              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+              </svg>
+            </div>
+            <h3 class="font-semibold">Agents on Alert</h3>
+          </div>
+          <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">Agentic detection &amp; response: an AI investigation framework over Snowflake Cortex and Tines, defined end to end as code. Built for my DEF CON 34 talk — scenario generator, semantic views, agent instructions, and ground-truth answer key included.</p>
+          <div class="flex-grow"></div>
+          <div class="flex flex-wrap gap-2 text-sm">
+            <a class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl ring-1 ring-slate-300/70 dark:ring-slate-700 hover:ring-primary/60 transition" href="https://github.com/sadewale4/agents-on-alert" target="_blank">
+              <img src="img/github.svg" alt="" class="w-4 h-4"/> Source
+            </a>
+          </div>
+        </article>
 
         <!-- Appsudo Platform Card -->
         <article class="rounded-2xl p-5 ring-1 ring-slate-200/80 dark:ring-slate-800 bg-white dark:bg-slate-900 shadow-sm hover:shadow-soft transition flex flex-col gap-3 min-h-[300px]">

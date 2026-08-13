@@ -53,9 +53,11 @@ defaults:
 # Exclude from processing
 exclude:
   - README.md
+  - CONTEXT.md
   - .gitignore
   - node_modules
   - vendor
+  - scripts
 
 # Include
 include:

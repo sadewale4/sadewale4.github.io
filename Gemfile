@@ -3,6 +3,14 @@ source "https://rubygems.org"
 # GitHub Pages gem includes Jekyll and all dependencies
 gem "github-pages", group: :jekyll_plugins
 
+# Ruby >= 3.4 no longer bundles these stdlib gems; Jekyll 3.9 needs them (local dev only)
+gem "csv"
+gem "webrick"
+gem "base64"
+gem "bigdecimal"
+gem "logger"
+gem "ostruct"
+
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
 # and associated library.
 platforms :mingw, :x64_mingw, :mswin, :jruby do
